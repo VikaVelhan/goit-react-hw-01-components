@@ -4,7 +4,7 @@ const Statistics = ({ title, stats }) => {
   return (
     <div>
       <section>
-        <h2>{title}</h2>
+        {title && <h2>{title}</h2>}
 
         {stats.map(stat => (
           <ul key={stat.id}>
@@ -21,6 +21,11 @@ const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
 export default Statistics;
