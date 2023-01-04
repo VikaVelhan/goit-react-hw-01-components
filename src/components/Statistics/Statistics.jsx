@@ -20,7 +20,7 @@ const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.array.isRequired,
 };
 export default Statistics;
