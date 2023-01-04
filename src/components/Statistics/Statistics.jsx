@@ -6,24 +6,14 @@ const Statistics = ({ title, stats }) => {
       <section>
         <h2>{title}</h2>
 
-        <ul>
-          <li>
-            <span>{stats.label}</span>
-            <span>{stats.percentage}%</span>
-          </li>
-          <li>
-            <span>{stats.label}</span>
-            <span>{stats.percentage}%</span>
-          </li>
-          <li>
-            <span>{stats.label}</span>
-            <span>{stats.percentage}%</span>
-          </li>
-          <li>
-            <span>{stats.label}</span>
-            <span>{stats.percentage}%</span>
-          </li>
-        </ul>
+        {stats.map(stat => (
+          <ul key={stat.id}>
+            <li>
+              <span>{stat.label}</span>
+              <span>{stat.percentage}%</span>
+            </li>
+          </ul>
+        ))}
       </section>
     </div>
   );
