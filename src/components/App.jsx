@@ -13,13 +13,13 @@ import transactions from '..//data/transactions.json';
 export const App = () => {
   return (
     <div
-      style={{
+    /*style={{
         display: 'flex',
         gap: 30,
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-      }}
+      }}*/
     >
       <Profile
         username={user.username}
